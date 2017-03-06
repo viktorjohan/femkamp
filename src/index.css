@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
+
 body{
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  background-color: #f8debd;
+  background-color: #F4F2F3;
 }
 
 ul{
   list-style-type: none;
   padding: 0;
+}
+
+li{
+  display: inline;
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
 }

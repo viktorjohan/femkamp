@@ -5,6 +5,9 @@ export default class Bollkastning extends Component{
     return(
       <div>
         <h1>Bollkastning!</h1>
+        <input type="text" placeholder="Kalle "/>
+        <input type="text" placeholder="CHuck norris" />
+        <button>Knappe</button>
       </div>
     )
   }
