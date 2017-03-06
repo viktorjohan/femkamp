@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+@fontface {
+  font-family: 'Bungee Inline', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Bungee+Inline')
+}
+
+body {
+  font-family: 'Bungee Inline', cursive;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
