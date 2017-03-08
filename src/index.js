@@ -107,10 +107,10 @@ class Index extends React.Component{
  		scoreArray.push(myObj);
  		
 
- 		stateArray[2].scores = [];
+ 		stateArray[0].scores = [];
  		
  		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[2].scores.push(scoreArray[i]);
+ 			stateArray[0].scores.push(scoreArray[i]);
  		}
 
  		this.setState({

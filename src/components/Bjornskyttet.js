@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import TextField from 'material-ui/TextField';
@@ -12,8 +11,8 @@ export default class Bjornskyttet extends Component{
 		e.preventDefault();
 
 		var myObj = {
-			competitor: this.refs.inputName.value,
-			score: this.refs.inputScore.value
+			competitor: this.refs.inputName.getValue(),
+			score: this.refs.inputScore.getValue()
 		}
 
 		this.props.route.onAddBjornSkyttet(myObj);
@@ -36,16 +35,22 @@ export default class Bjornskyttet extends Component{
 		);
 	});
     return(
+    	<MuiThemeProvider>
       <div>
         <h1>Björnskyttet!</h1>
         <form onSubmit={this.handleAdd}>
-			<input type="text" placeholder="Name" ref="inputName" required/>
-			<input type="number" placeholder="Score" ref="inputScore" required/>
-			<button type="submit">Add</button>
-
+			{/*<input type="text" placeholder="Name" ref="inputName" required/>
+						<input type="number" placeholder="Score" ref="inputScore" required/>
+						<button type="submit">Add</button>*/}
+						<TextField floatingLabelText="EnkaSveden" type="text" hintText="Name" ref="inputName" />
+						<TextField floatingLabelText="BörjeEnka" type="number" hintText="Score" ref="inputScore" /><br/><br/>
+					<FloatingActionButton mini={true} type="submit">
+						<ContentAdd />
+					</FloatingActionButton>
 		</form>
         <div>{theScores}</div>
       </div>
+      </MuiThemeProvider>
     )
   }
 }
