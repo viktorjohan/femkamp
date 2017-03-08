@@ -4,20 +4,13 @@ export default class Vattenracet extends Component{
 	
     handleAdd = (e) => {
 		e.preventDefault();
-		// var scoreArray = this.state.scores;
 
 		var myObj = {
 			competitor: this.refs.inputName.value,
 			score: this.refs.inputScore.value 
 		}
 
-		this.props.route.onAdd(myObj);
-
-		// scoreArray.push(myObj);
-
-		// this.setState({
-		// 	scores: scoreArray
-		// });
+		this.props.route.onAddVattenRacet(myObj);
 
 		this.refs.inputName.value = "";	
 		this.refs.inputScore.value = "";	

@@ -101,7 +101,24 @@ class Index extends React.Component{
  //            })
  //    }
 
- 	onAdd = (myObj) => {
+ 	onAddBollKastning = (myObj) => {
+ 		var stateArray = this.state.resultat;
+ 		var scoreArray = this.state.resultat[0].scores;
+ 		scoreArray.push(myObj);
+ 		
+
+ 		stateArray[2].scores = [];
+ 		
+ 		for(var i = 0; i < scoreArray.length; i++){
+ 			stateArray[2].scores.push(scoreArray[i]);
+ 		}
+
+ 		this.setState({
+ 			resultat: stateArray
+ 		});
+ 	}
+
+ 	onAddVattenRacet = (myObj) => {
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[1].scores;
  		scoreArray.push(myObj);
@@ -112,10 +129,57 @@ class Index extends React.Component{
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[1].scores.push(scoreArray[i]);
  		}
- 		// console.log(stateArray);
- 		// stateArray[1].scores.splice(0, 1, scoreArray);
- 		// stateArray[1].scores.push(scoreArray);
- 		// console.log(stateArray);
+
+ 		this.setState({
+ 			resultat: stateArray
+ 		});
+ 	}
+
+ 	onAddBjornSkyttet = (myObj) => {
+ 		var stateArray = this.state.resultat;
+ 		var scoreArray = this.state.resultat[2].scores;
+ 		scoreArray.push(myObj);
+ 		
+
+ 		stateArray[2].scores = [];
+ 		
+ 		for(var i = 0; i < scoreArray.length; i++){
+ 			stateArray[2].scores.push(scoreArray[i]);
+ 		}
+
+ 		this.setState({
+ 			resultat: stateArray
+ 		});
+ 	}
+
+ 	onAddUncleSam = (myObj) => {
+ 		var stateArray = this.state.resultat;
+ 		var scoreArray = this.state.resultat[3].scores;
+ 		scoreArray.push(myObj);
+ 		
+
+ 		stateArray[3].scores = [];
+ 		
+ 		for(var i = 0; i < scoreArray.length; i++){
+ 			stateArray[3].scores.push(scoreArray[i]);
+ 		}
+
+ 		this.setState({
+ 			resultat: stateArray
+ 		});
+ 	}
+
+ 	onAddGaloppBanan = (myObj) => {
+ 		var stateArray = this.state.resultat;
+ 		var scoreArray = this.state.resultat[4].scores;
+ 		scoreArray.push(myObj);
+ 		
+
+ 		stateArray[4].scores = [];
+ 		
+ 		for(var i = 0; i < scoreArray.length; i++){
+ 			stateArray[4].scores.push(scoreArray[i]);
+ 		}
 
  		this.setState({
  			resultat: stateArray
@@ -124,16 +188,15 @@ class Index extends React.Component{
 
 
 	render(){
-		console.log(this.state.resultat);
 		return(
 			<Router history={browserHistory}>
   				<Route path="/" component={App}>
   					<IndexRoute component={Main}/>
-			  		<Route path="/bollkastning" component={Bollkastning} />
-			        <Route path="/vattenracet" resultat={this.state.resultat} onAdd={this.onAdd} component={Vattenracet} />
-			        <Route path="/bjornskyttet" component={Bjornskyttet} />
-			        <Route path="/unclesam" component={UncleSam} />
-			        <Route path="/galoppbanan" component={Galoppbanan} />
+			  		<Route path="/bollkastning" resultat={this.state.resultat} onAddBollKastning={this.onAddBollKastning} component={Bollkastning} />
+			        <Route path="/vattenracet" resultat={this.state.resultat} onAddVattenRacet={this.onAddVattenRacet} component={Vattenracet} />
+			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAddBjornSkyttet={this.onAddBjornSkyttet} component={Bjornskyttet} />
+			        <Route path="/unclesam" resultat={this.state.resultat} onAddUncleSam={this.onAddUncleSam} component={UncleSam} />
+			        <Route path="/galoppbanan" resultat={this.state.resultat} onAddGaloppBanan={this.onAddGaloppBanan} component={Galoppbanan} />
   				</Route>
  			 </Router>
 		);
