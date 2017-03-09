@@ -40,8 +40,8 @@ export default class Vattenracet extends Component{
         <form onSubmit={this.handleAdd}>
 					{/*<input type="text" placeholder="Name" ref="inputName" required/>}
 					{<input type="number" placeholder="Score" ref="inputScore" required/>*/}
-						<TextField floatingLabelText="EnkaSveden" type="text" hintText="Name" ref="inputName" />
-						<TextField floatingLabelText="BörjeEnka" type="number" hintText="Score" ref="inputScore" /><br/><br/>
+						<TextField floatingLabelText="EnkaSveden" type="text" hintText="Name" ref="inputName" required/>
+						<TextField floatingLabelText="BörjeEnka" type="number" hintText="Score" ref="inputScore" min="0" required /><br/><br/>
 					<FloatingActionButton mini={true} type="submit">
 						<ContentAdd />
 					</FloatingActionButton>

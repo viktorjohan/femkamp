@@ -92,7 +92,7 @@ class Index extends React.Component{
 }
 
 	// componentDidMount = () => {
- //    this.serverRequest = 
+ //    this.serverRequest =
  //       axios.get('https://www.hulabeck.se/html/temp/femkampsResultat.json')
  //            .then(res => {
  //                this.setState({
@@ -105,10 +105,10 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[0].scores;
  		scoreArray.push(myObj);
- 		
+
 
  		stateArray[2].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[2].scores.push(scoreArray[i]);
  		}
@@ -122,10 +122,9 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[1].scores;
  		scoreArray.push(myObj);
- 		
 
  		stateArray[1].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[1].scores.push(scoreArray[i]);
  		}
@@ -139,10 +138,10 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[2].scores;
  		scoreArray.push(myObj);
- 		
+
 
  		stateArray[2].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[2].scores.push(scoreArray[i]);
  		}
@@ -156,10 +155,10 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[3].scores;
  		scoreArray.push(myObj);
- 		
+
 
  		stateArray[3].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[3].scores.push(scoreArray[i]);
  		}
@@ -173,10 +172,10 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[4].scores;
  		scoreArray.push(myObj);
- 		
+
 
  		stateArray[4].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[4].scores.push(scoreArray[i]);
  		}
