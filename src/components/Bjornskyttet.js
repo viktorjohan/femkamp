@@ -15,11 +15,10 @@ export default class Bjornskyttet extends Component{
 			score: this.refs.inputScore.getValue()
 		}
 
-		this.props.route.onAddBjornSkyttet(myObj);
+		this.props.route.onAdd(myObj, 2);
 
 		this.refs.inputName.value = "";
 		this.refs.inputScore.value = "";
-
 
 	}
 
@@ -42,8 +41,8 @@ export default class Bjornskyttet extends Component{
 			{/*<input type="text" placeholder="Name" ref="inputName" required/>
 						<input type="number" placeholder="Score" ref="inputScore" required/>
 						<button type="submit">Add</button>*/}
-						<TextField floatingLabelText="EnkaSveden" type="text" hintText="Name" ref="inputName" />
-						<TextField floatingLabelText="BörjeEnka" type="number" hintText="Score" ref="inputScore" /><br/><br/>
+						<TextField floatingLabelText="Name" type="text" ref="inputName" />
+            			<TextField floatingLabelText="Score" type="number" ref="inputScore" /><br/><br/>
 					<FloatingActionButton mini={true} type="submit">
 						<ContentAdd />
 					</FloatingActionButton>
