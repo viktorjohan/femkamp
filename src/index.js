@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import axios from 'axios';
+// import axios from 'axios';
 import App from './App';
 import Main from './components/Main';
 import Bollkastning from './components/Bollkastning';
@@ -101,101 +101,33 @@ class Index extends React.Component{
  //            })
  //    }
 
- 	onAddBollKastning = (myObj) => {
+ onAdd = (myObj, x) => {
  		var stateArray = this.state.resultat;
- 		var scoreArray = this.state.resultat[0].scores;
+ 		var scoreArray = this.state.resultat[x].scores;
  		scoreArray.push(myObj);
 
 
- 		stateArray[2].scores = [];
+ 		stateArray[x].scores = [];
 
  		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[2].scores.push(scoreArray[i]);
+ 			stateArray[x].scores.push(scoreArray[i]);
  		}
 
  		this.setState({
  			resultat: stateArray
  		});
  	}
-
- 	onAddVattenRacet = (myObj) => {
- 		var stateArray = this.state.resultat;
- 		var scoreArray = this.state.resultat[1].scores;
- 		scoreArray.push(myObj);
-
- 		stateArray[1].scores = [];
-
- 		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[1].scores.push(scoreArray[i]);
- 		}
-
- 		this.setState({
- 			resultat: stateArray
- 		});
- 	}
-
- 	onAddBjornSkyttet = (myObj) => {
- 		var stateArray = this.state.resultat;
- 		var scoreArray = this.state.resultat[2].scores;
- 		scoreArray.push(myObj);
-
-
- 		stateArray[2].scores = [];
-
- 		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[2].scores.push(scoreArray[i]);
- 		}
-
- 		this.setState({
- 			resultat: stateArray
- 		});
- 	}
-
- 	onAddUncleSam = (myObj) => {
- 		var stateArray = this.state.resultat;
- 		var scoreArray = this.state.resultat[3].scores;
- 		scoreArray.push(myObj);
-
-
- 		stateArray[3].scores = [];
-
- 		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[3].scores.push(scoreArray[i]);
- 		}
-
- 		this.setState({
- 			resultat: stateArray
- 		});
- 	}
-
- 	onAddGaloppBanan = (myObj) => {
- 		var stateArray = this.state.resultat;
- 		var scoreArray = this.state.resultat[4].scores;
- 		scoreArray.push(myObj);
-
-
- 		stateArray[4].scores = [];
-
- 		for(var i = 0; i < scoreArray.length; i++){
- 			stateArray[4].scores.push(scoreArray[i]);
- 		}
-
- 		this.setState({
- 			resultat: stateArray
- 		});
- 	}
-
 
 	render(){
 		return(
 			<Router history={browserHistory}>
   				<Route path="/" component={App}>
-  					<IndexRoute component={Main}/>
-			  		<Route path="/bollkastning" resultat={this.state.resultat} onAddBollKastning={this.onAddBollKastning} component={Bollkastning} />
-			        <Route path="/vattenracet" resultat={this.state.resultat} onAddVattenRacet={this.onAddVattenRacet} component={Vattenracet} />
-			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAddBjornSkyttet={this.onAddBjornSkyttet} component={Bjornskyttet} />
-			        <Route path="/unclesam" resultat={this.state.resultat} onAddUncleSam={this.onAddUncleSam} component={UncleSam} />
-			        <Route path="/galoppbanan" resultat={this.state.resultat} onAddGaloppBanan={this.onAddGaloppBanan} component={Galoppbanan} />
+  					<IndexRoute resultat={this.state.resultat} component={Main}/>
+			  		<Route path="/bollkastning" resultat={this.state.resultat} onAdd={this.onAdd} component={Bollkastning} />
+			        <Route path="/vattenracet" resultat={this.state.resultat} onAdd={this.onAdd} component={Vattenracet} />
+			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAdd={this.onAdd} component={Bjornskyttet} />
+			        <Route path="/unclesam" resultat={this.state.resultat} onAdd={this.onAdd} component={UncleSam} />
+			        <Route path="/galoppbanan" resultat={this.state.resultat} onAdd={this.onAdd} component={Galoppbanan} />
   				</Route>
  			 </Router>
 		);

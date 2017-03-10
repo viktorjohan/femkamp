@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import TextField from 'material-ui/TextField';
 
 export default class Galoppbanan extends Component{
 
@@ -6,14 +10,14 @@ export default class Galoppbanan extends Component{
 		e.preventDefault();
 
 		var myObj = {
-			competitor: this.refs.inputName.value,
-			score: this.refs.inputScore.value 
+			competitor: this.refs.inputName.getValue(),
+			score: this.refs.inputScore.getValue()
 		}
 
-		this.props.route.onAddGaloppBanan(myObj);
+		this.props.route.onAdd(myObj, 4);
 
-		this.refs.inputName.value = "";	
-		this.refs.inputScore.value = "";	
+		this.refs.inputName.value = "";
+		this.refs.inputScore.value = "";
 
 	}
 
@@ -28,15 +32,21 @@ export default class Galoppbanan extends Component{
 		);
 	});
     return(
+      <MuiThemeProvider>
       <div>
         <h1>Vattenracet!</h1>
         <form onSubmit={this.handleAdd}>
-			<input type="text" placeholder="Name" ref="inputName" required/>
-			<input type="number" placeholder="Score" ref="inputScore" required/>
-			<button type="submit">Add</button>
-		</form>
+					{/*<input type="text" placeholder="Name" ref="inputName" required/>}
+					{<input type="number" placeholder="Score" ref="inputScore" required/>*/}
+						<TextField floatingLabelText="Name" type="text" ref="inputName" />
+            			<TextField floatingLabelText="Score" type="number" ref="inputScore" /><br/><br/>
+					<FloatingActionButton mini={true} type="submit">
+						<ContentAdd />
+					</FloatingActionButton>
+				</form>
         <div>{theScores}</div>
       </div>
+			</MuiThemeProvider>
     )
   }
 }
