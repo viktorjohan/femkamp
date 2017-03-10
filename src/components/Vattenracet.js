@@ -23,6 +23,7 @@ export default class Vattenracet extends Component{
 
 	}
 
+
   render(){
 	var theScores = this.props.route.resultat[1].scores;
 	theScores = theScores.map(function(item, index){
