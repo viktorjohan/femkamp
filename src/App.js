@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <h1 className="header-h1"><span style={{borderBottom: '6px solid #d40052'}}>Fem</span><span style={{borderBottom: '6px solid #00bcd4'}}>kampen<span style={{color: '#d40052'}}>!</span></span></h1>
+          <h1 className="header-h1"><span style={{borderBottom: '6px solid #d40052'}}>Fem</span><span style={{borderBottom: '6px solid #00bcd4'}}>kampen</span></h1>
           <ul className="nav-ul">
             {/*<li><IndexLink to='/'>Home</IndexLink></li>*/}
             <li className="nav-li"><Link to='/bollkastning'>Bollkastning</Link></li>

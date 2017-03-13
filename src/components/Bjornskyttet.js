@@ -39,8 +39,8 @@ export default class Bjornskyttet extends Component{
     return(
     	<MuiThemeProvider>
       <div>
-				<img src={TeddyLogo} style={{width: '160px', paddingTop: '13', position: 'relative', left: '25'}}/>
-        <img src={RifleLogo} style={{width: '160px', paddingTop: '13', position: 'relative', right: '20', transform: "rotate(28deg)"}}/>
+				<img src={TeddyLogo} style={{width: '160px', position: 'relative', left: '25'}}/>
+        <img src={RifleLogo} style={{width: '160px', position: 'relative', right: '20', transform: "rotate(28deg)"}}/>
         <form onSubmit={this.handleAdd}>
 						<TextField floatingLabelText="Namn" type="text" ref="inputName" required/><br/>
             <TextField floatingLabelText="Poäng" type="number" ref="inputScore" min="0" required/><br/>
