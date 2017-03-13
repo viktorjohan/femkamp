@@ -21,6 +21,13 @@ export default class Bollkastning extends Component{
 
   }
 
+  handleDelete = () =>{
+
+    var name = this.refs.inputName.getValue();
+
+    this.props.route.onDelete(name, 0);
+  }
+
   render(){
   var theScores = this.props.route.resultat[0].scores; 
   theScores = theScores.map(function(item, index){
@@ -44,6 +51,7 @@ export default class Bollkastning extends Component{
             <ContentAdd />
           </FloatingActionButton>
         </form>
+          <button onClick={this.handleDelete}>delete</button>
         <div>{theScores}</div>
       </div>
       </MuiThemeProvider>

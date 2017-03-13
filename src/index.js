@@ -104,11 +104,29 @@ class Index extends React.Component{
  onAdd = (myObj, x) => {
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[x].scores;
- 		scoreArray.push(myObj);
+ 		scoreArray.unshift(myObj);
  		
 
  		stateArray[x].scores = [];
  		
+ 		for(var i = 0; i < scoreArray.length; i++){
+ 			stateArray[x].scores.push(scoreArray[i]);
+ 		}
+
+ 		this.setState({
+ 			resultat: stateArray
+ 		});
+ 	}
+
+ 	onDelete = (name, x) => {
+ 		var stateArray = this.state.resultat;
+ 		var scoreArray = this.state.resultat[x].scores;
+ 		scoreArray = scoreArray.filter(function(val){
+ 			return val.competitor !== name;
+ 		});
+
+ 		stateArray[x].scores = [];
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[x].scores.push(scoreArray[i]);
  		}
@@ -123,7 +141,7 @@ class Index extends React.Component{
 			<Router history={browserHistory}>
   				<Route path="/" component={App}>
   					<IndexRoute resultat={this.state.resultat} component={Main}/>
-			  		<Route path="/bollkastning" resultat={this.state.resultat} onAdd={this.onAdd} component={Bollkastning} />
+			  		<Route path="/bollkastning" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={Bollkastning} />
 			        <Route path="/vattenracet" resultat={this.state.resultat} onAdd={this.onAdd} component={Vattenracet} />
 			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAdd={this.onAdd} component={Bjornskyttet} />
 			        <Route path="/unclesam" resultat={this.state.resultat} onAdd={this.onAdd} component={UncleSam} />
