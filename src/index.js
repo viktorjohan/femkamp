@@ -104,7 +104,7 @@ class Index extends React.Component{
  onAdd = (myObj, x) => {
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[x].scores;
- 		scoreArray.unshift(myObj);
+ 		scoreArray.push(myObj);
 
  		stateArray[x].scores = [];
 
@@ -141,10 +141,10 @@ class Index extends React.Component{
   				<Route path="/" component={App}>
   					<IndexRoute resultat={this.state.resultat} component={Main}/>
 			  		<Route path="/bollkastning" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={Bollkastning} />
-			        <Route path="/vattenracet" resultat={this.state.resultat} onAdd={this.onAdd} component={Vattenracet} />
-			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAdd={this.onAdd} component={Bjornskyttet} />
-			        <Route path="/unclesam" resultat={this.state.resultat} onAdd={this.onAdd} component={UncleSam} />
-			        <Route path="/galoppbanan" resultat={this.state.resultat} onAdd={this.onAdd} component={Galoppbanan} />
+			        <Route path="/vattenracet" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={Vattenracet} />
+			        <Route path="/bjornskyttet" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={Bjornskyttet} />
+			        <Route path="/unclesam" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={UncleSam} />
+			        <Route path="/galoppbanan" resultat={this.state.resultat} onAdd={this.onAdd} onDelete={this.onDelete} component={Galoppbanan} />
   				</Route>
  			 </Router>
 		);

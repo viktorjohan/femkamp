@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 @import url('https://fonts.googleapis.com/css?family=Lato|Harmattan|Comfortaa');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 
 
 html, body{
@@ -9,7 +10,6 @@ html, body{
 
 body{
   font-family: 'Roboto', sans-serif;
-  text-align: center;
   background-image: url("../public/coverimage3.jpg");
   /*background-color: #E0F7FA;*/
 }
@@ -57,10 +57,17 @@ a:hover{
   font-size: 46px;
   margin: 0;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .resultat-container{
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  /*height: 300px;*/
 }
 
 ul{
@@ -72,6 +79,15 @@ li{
   display: inline;
   margin: 10px;
 }
+
+form{
+  text-align: center;
+}
+
+.img-container{
+  text-align: center;
+}
+
 
 @media screen and (max-width: 797px){
 
