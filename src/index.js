@@ -92,7 +92,7 @@ class Index extends React.Component{
 }
 
 	// componentDidMount = () => {
- //    this.serverRequest = 
+ //    this.serverRequest =
  //       axios.get('https://www.hulabeck.se/html/temp/femkampsResultat.json')
  //            .then(res => {
  //                this.setState({
@@ -105,10 +105,9 @@ class Index extends React.Component{
  		var stateArray = this.state.resultat;
  		var scoreArray = this.state.resultat[x].scores;
  		scoreArray.unshift(myObj);
- 		
 
  		stateArray[x].scores = [];
- 		
+
  		for(var i = 0; i < scoreArray.length; i++){
  			stateArray[x].scores.push(scoreArray[i]);
  		}
