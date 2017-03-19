@@ -37,7 +37,7 @@ h2{
 a{
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  transition: all 0.2s;
+  transition: all 0.5s;
   color: #333;
   /*border-right: 1px solid #E0F7FA;*/
 }
@@ -48,7 +48,6 @@ li+li {
 }
 
 a:hover{
-  color: #333;
   border-color: #00bcd4;
 }
 
@@ -60,15 +59,6 @@ a:hover{
   text-align: center;
 }
 
-.resultat-container{
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  /*flex-wrap: wrap;*/
-  /*height: 300px;*/
-}
 
 ul{
   list-style-type: none;
@@ -88,6 +78,49 @@ form{
   text-align: center;
 }
 
+.resultat-container{
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.comp-container:first-child{
+  padding-bottom: 15px;
+  border-bottom: 2px solid black;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.comp-container:last-child{
+  padding-top: 15px;
+  border-top: 2px solid black;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}*/
+
+.comp-container{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #dbe8fc;
+  padding:1px 20px 1px 20px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;*/
+}
+
+.name-container{
+  border-bottom: 3px solid #00bcd4;
+  font-size: 24px;
+}
+
+.score-container{
+  border-bottom: 3px solid #d40052;
+  font-size: 21px;
+  color: #0d0d0d;
+}
+
 
 @media screen and (max-width: 797px){
 
@@ -100,7 +133,6 @@ form{
     padding-left: 0;
   }
   li{
-    border-bottom: 1px solid black;
     padding-top: 26px;
     margin: auto;
   }

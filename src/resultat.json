@@ -1,0 +1,103 @@
+{"femkampsResultat": [
+    {
+        "id": 1,
+        "name": "Bollkastning",
+        "scores": [
+            {"competitor": "Lena Last", "date": "2017-02-27 15:35:22", "score": 530},
+            {"competitor": "Viktor Johansson", "date": "2017-03-04 21:39:55", "score": 160},
+            {"competitor": "Erik Svedenlund", "date": "2017-03-01 16:49:33", "score": 600},
+            {"competitor": "Renzo Hidalgo", "date": "2017-03-08 09:12:39", "score": 480},
+            {"competitor": "Andreas Vilhelmsson", "date": "2017-03-01 11:28:46", "score": 400},
+            {"competitor": "Samuel Rudholm", "date": "2017-03-04 22:00:08", "score": 350},
+            {"competitor": "Maja Gedda", "date": "2017-02-28 13:34:28", "score": 410},
+            {"competitor": "Jamiu 'Markay' Makanjuola ", "date": "2017-02-28 13:34:28", "score": 420},
+            {"competitor": "Dorsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 380},
+            {"competitor": "Hajar Rashidi", "date": "2017-02-28 13:34:28", "score": 590},
+            {"competitor": "Hans Andersson", "date": "2017-02-28 13:34:28", "score": 320},
+            {"competitor": "Golsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 370},
+            {"competitor": "Md Alamgir Rana", "date": "2017-02-28 13:34:28", "score": 520},
+            {"competitor": "Christian Nylander", "date": "2017-03-01 16:55:09", "score": 200}
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Vattenracet",
+        "scores": [
+            {"competitor": "Lena Last", "date": "2017-02-27 15:35:22", "score": 390},
+            {"competitor": "Viktor Johansson", "date": "2017-03-04 21:39:55", "score": 110},
+            {"competitor": "Dorsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 420},
+            {"competitor": "Hajar Rashidi", "date": "2017-02-28 13:34:28", "score": 590},
+            {"competitor": "Hans Andersson", "date": "2017-02-28 13:34:28", "score": 520},
+            {"competitor": "Christian Nylander", "date": "2017-03-01 16:55:09", "score": 120},
+            {"competitor": "Golsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 370},
+            {"competitor": "Md Alamgir Rana", "date": "2017-02-28 13:34:28", "score": 520},
+            {"competitor": "Erik Svedenlund", "date": "2017-03-01 16:49:33", "score": 310},
+            {"competitor": "Renzo Hidalgo", "date": "2017-03-08 09:12:39", "score": 480},
+            {"competitor": "Andreas Vilhelmsson", "date": "2017-03-01 11:28:46", "score": 400},
+            {"competitor": "Samuel Rudholm", "date": "2017-03-04 22:00:08", "score": 350},
+            {"competitor": "Maja Gedda", "date": "2017-02-28 13:34:28", "score": 400},
+            {"competitor": "Jamiu 'Markay' Makanjuola ", "date": "2017-02-28 13:34:28", "score": 410}
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Björnskyttet",
+        "scores": [
+            {"competitor": "Christian Nylander", "date": "2017-03-01 16:55:09", "score": 35},
+            {"competitor": "Golsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 32},
+            {"competitor": "Hans Andersson", "date": "2017-02-28 13:34:28", "score": 20},
+            {"competitor": "Viktor Johansson", "date": "2017-03-04 21:39:55", "score": 32},
+            {"competitor": "Erik Svedenlund", "date": "2017-03-01 16:49:33", "score": 28},
+            {"competitor": "Renzo Hidalgo", "date": "2017-03-08 09:12:39", "score": 41},
+            {"competitor": "Lena Last", "date": "2017-02-27 15:35:22", "score": 28},
+            {"competitor": "Andreas Vilhelmsson", "date": "2017-03-01 11:28:46", "score": 29},
+            {"competitor": "Md Alamgir Rana", "date": "2017-02-28 13:34:28", "score": 31},
+            {"competitor": "Maja Gedda", "date": "2017-02-28 13:34:28", "score": 37},
+            {"competitor": "Jamiu 'Markay' Makanjuola ", "date": "2017-02-28 13:34:28", "score": 22},
+            {"competitor": "Dorsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 23},
+            {"competitor": "Hajar Rashidi", "date": "2017-02-28 13:34:28", "score": 26},
+            {"competitor": "Samuel Rudholm", "date": "2017-03-04 22:00:08", "score": 29}
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Uncle Sam",
+        "scores": [
+            {"competitor": "Andreas Vilhelmsson", "date": "2017-03-01 11:28:46", "score": 69},
+            {"competitor": "Christian Nylander", "date": "2017-03-01 16:55:09", "score": 58},
+            {"competitor": "Golsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 77},
+            {"competitor": "Hans Andersson", "date": "2017-02-28 13:34:28", "score": 89},
+            {"competitor": "Viktor Johansson", "date": "2017-03-04 21:39:55", "score": 68},
+            {"competitor": "Jamiu 'Markay' Makanjuola ", "date": "2017-02-28 13:34:28", "score": 82},
+            {"competitor": "Md Alamgir Rana", "date": "2017-02-28 13:34:28", "score": 90},
+            {"competitor": "Samuel Rudholm", "date": "2017-03-04 22:00:08", "score": 87},
+            {"competitor": "Hajar Rashidi", "date": "2017-02-28 13:34:28", "score": 79},
+            {"competitor": "Dorsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 83},
+            {"competitor": "Erik Svedenlund", "date": "2017-03-01 16:49:33", "score": 85},
+            {"competitor": "Renzo Hidalgo", "date": "2017-03-08 09:12:39", "score": 79},
+            {"competitor": "Lena Last", "date": "2017-02-27 15:35:22", "score": 87},
+            {"competitor": "Maja Gedda", "date": "2017-02-28 13:34:28", "score": 77}
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Galoppbanan",
+        "scores": [
+            {"competitor": "Jamiu 'Markay' Makanjuola ", "date": "2017-02-28 13:34:28", "score": 6},
+            {"competitor": "Andreas Vilhelmsson", "date": "2017-03-01 11:28:46", "score": 9},
+            {"competitor": "Hans Andersson", "date": "2017-02-28 13:34:28", "score": 13},
+            {"competitor": "Lena Last", "date": "2017-02-27 15:35:22", "score": 15},
+            {"competitor": "Maja Gedda", "date": "2017-02-28 13:34:28", "score": 16},
+            {"competitor": "Samuel Rudholm", "date": "2017-03-04 22:00:08", "score": 8},
+            {"competitor": "Christian Nylander", "date": "2017-03-01 16:55:09", "score": 11},
+            {"competitor": "Viktor Johansson", "date": "2017-03-04 21:39:55", "score": 15},
+            {"competitor": "Md Alamgir Rana", "date": "2017-02-28 13:34:28", "score": 20},
+            {"competitor": "Hajar Rashidi", "date": "2017-02-28 13:34:28", "score": 11},
+            {"competitor": "Dorsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 21},
+            {"competitor": "Erik Svedenlund", "date": "2017-03-01 16:49:33", "score": 14},
+            {"competitor": "Renzo Hidalgo", "date": "2017-03-08 09:12:39", "score": 16},
+            {"competitor": "Golsa Nahidpoor", "date": "2017-02-28 13:34:28", "score": 13}
+        ]
+    }
+]
+}

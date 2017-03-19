@@ -3,12 +3,24 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
+import ContentSort from 'material-ui/svg-icons/content/sort';
 import TextField from 'material-ui/TextField';
-import RifleLogo from '../../public/rifle.svg';
-import TeddyLogo from '../../public/teddy-bear.svg';
+import RifleLogo from '../../public/rifle3.svg';
+import TeddyLogo from '../../public/teddy-bear2.svg';
+import $ from 'jquery';
 
 
 export default class Bjornskyttet extends Component{
+
+	componentDidMount = () => {
+        var animationName = "animated jello";
+        var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+        $("img").mouseenter(function(){
+          $(this).addClass(animationName).one(animationEnd, function(){
+            $(this).removeClass(animationName);
+          });
+        });
+      }
 
 	handleAdd = (e) => {
 		e.preventDefault();
@@ -32,14 +44,18 @@ export default class Bjornskyttet extends Component{
     this.props.route.onDelete(name, 2);
   }
 
-  render(){
+  handleSort = () =>{
+    this.props.route.onSort(2);
+  }
 
+  render(){
   var theScores = this.props.route.resultat[2].scores;
 	theScores = theScores.map(function(item, index){
 		return(
-			<div key={index} className="animated fadeInDown">
-         		 <p><span style={{borderBottom: '3px solid #00bcd4', fontSize: '24px'}}>{item.competitor}</span> <span style={{borderBottom: '3px solid #d40052', fontSize: '21px', color: '#0d0d0d'}}>{item.score}</span></p>
-			</div>
+			<div key={index} className="animated fadeInDown comp-container">
+	          <div className="name-container">{item.competitor}</div>
+	          <div className="score-container">{item.score}</div>
+	      </div>
 		);
 	});
     return(
@@ -47,16 +63,19 @@ export default class Bjornskyttet extends Component{
       <div>
       <div className="img-container">
 		<img src={TeddyLogo} alt='Bjornskyttet' style={{width: '160px', position: 'relative', left: '25px'}}/>
-        <img src={RifleLogo} alt='rifle' style={{width: '160px', position: 'relative', right: '20px', transform: "rotate(28deg)"}}/>
+        <img src={RifleLogo} alt='rifle' style={{width: '160px', position: 'relative'}}/>
        </div>
         <form onSubmit={this.handleAdd}>
             <TextField floatingLabelText="Namn" type="text" ref="inputName" required /><br/>
             <TextField floatingLabelText="Poäng" type="number" ref="inputScore" required min="0"/><br/>
-            <FloatingActionButton mini={true} type="submit" style={{marginBottom: '10px', marginTop: '16px', marginRight: '15px'}}>
+            <FloatingActionButton mini={true} type="submit" style={{marginBottom: '10px', marginTop: '16px'}}>
               <ContentAdd />
             </FloatingActionButton>
-            <FloatingActionButton mini={true} secondary={true} type="button" onClick={this.handleDelete} >
+            <FloatingActionButton mini={true} secondary={true} type="button" onClick={this.handleDelete} style={{marginRight:'15px', marginLeft: '15px'}}>
               <ContentRemove/>
+            </FloatingActionButton>
+            <FloatingActionButton mini={true} type="button" backgroundColor="teal" onClick={this.handleSort} >
+              <ContentSort/>
             </FloatingActionButton>
         </form>
         <div className="resultat-container">

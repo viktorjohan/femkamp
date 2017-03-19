@@ -1,24 +1,22 @@
 import React, {Component} from 'react';
+import TrophyLogo from '../../public/trophy.svg';
+import $ from 'jquery';
 
 export default class Main extends Component{
-  render(){
-  	var theScores = this.props.route.resultat;
-  	theScores = theScores.map(function(item, index){
-  		return item.scores.map(function(x, i){
-  			return(
-  				<div key={i}>
-  					<h2>{x.competitor}</h2>
-  					<p>{x.score}</p>
-  				</div>
-  			);
-  		});
-  	});
 
+  componentDidMount = () => {
+        var animationName = "animated zoomIn";
+        var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+          $("img").addClass(animationName).one(animationEnd, function(){
+            $(this).removeClass(animationName);
+          });
+  }
+
+  render(){
     return(
-    	<div>
-      		<h2>we dem main boys</h2>
-      		<div>{theScores}</div>
-      	</div>
+    	<div style={{textAlign: 'center'}}>
+        <img src={TrophyLogo} style={{width: '340px'}} /> 
+      </div>
     )
   }
 }
